@@ -1,0 +1,36 @@
+﻿@model DbQuery<BookCollection.Models.BooklistDetailView>
+@{
+    ViewBag.Title = "Book Lists";
+}
+
+<div class="regSite">
+    <div class="jumbotron">
+        <h2>@ViewBag.Title</h2>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-md-4">
+                <b>Name</b>
+            </div>
+            <div class="col-md-4">
+                <b>Number of books</b>
+            </div>
+        </div>
+        @foreach (var item in Model.Select(m => new { m.booklistId, m.booklistName }).Distinct())
+        {
+            <div class="row">
+                <div class="col-md-4">
+                    <p>@Html.ActionLink(item.booklistName, "Details", "BookCollection", new { booklistId = item.booklistId }, null)</p>
+                </div>
+                <div class="col-md-4">
+                    <p>@Model.Where(m => m.booklistId == item.booklistId && m.bookName != null).Count()</p>
+                </div>
+            </div>
+        }
+
+        <hr />
+
+        @Html.ActionLink("Add new book List", "CreateNewBooklist", "BookCollection")
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="58c51371acc4451eaf31a7006afdbddd" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="DefaultConnectionModel.Booklists" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DefaultConnectionModel.linkAspNetUsersBooklists" Width="1.5" PointX="0.625" PointY="3.125" />
+        <AssociationConnector Association="DefaultConnectionModel.FK__linkAspNe__bookl__3F466844" />
+        <EntityTypeShape EntityType="DefaultConnectionModel.Books" Width="1.5" PointX="6.25" PointY="0.875" />
+        <EntityTypeShape EntityType="DefaultConnectionModel.linkBooklistsBooks" Width="1.5" PointX="3.625" PointY="0.75" />
+        <AssociationConnector Association="DefaultConnectionModel.FK__linkBookl__bookl__4BAC3F29" />
+        <AssociationConnector Association="DefaultConnectionModel.FK__linkBookl__bookI__4CA06362" />
+        <EntityTypeShape EntityType="DefaultConnectionModel.BooklistDetailView" Width="1.5" PointX="3.375" PointY="3.125" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

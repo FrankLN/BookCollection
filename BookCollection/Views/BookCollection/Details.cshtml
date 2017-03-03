@@ -1,0 +1,45 @@
+﻿@model DbQuery<BookCollection.Models.BooklistDetailView>
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-4">
+            @Html.ActionLink("Back", "index", "BookCollection")
+            <h2>@Model.FirstOrDefault().booklistName</h2>
+            <p>Id: @Model.FirstOrDefault().booklistId</p>
+            <p>Number of books: @Model.Count()</p>
+        </div>
+        <div class="col-md-8">
+            <h2>Books</h2>
+            @Html.ActionLink("Add new book", "CreateNewBook", "BookCollection", new { booklistId = Model.FirstOrDefault().booklistId }, null)
+            <div class="row">
+                <div class="col-md-1">
+                    <b>#</b>
+                </div>
+                <div class="col-md-23">
+                    <b>Book Name</b>
+                </div>
+            </div>
+                    
+            @foreach (var book in Model.Select(m => new { m.bookId, m.bookName, m.bookPublishYear, m.bookEANNumber, m.bookOwned }).Distinct())
+            {
+
+                <div class="rows">
+                    <div class="col-md-1">
+                        @Html.CheckBox("bookOwned", (bool)book.bookOwned ? true : false, new { onClick= "SubForm(" + book.bookId + ")" })
+                    </div>
+                    <div class="col-md-23">
+                        @book.bookName
+                    </div>
+                </div>
+            }
+
+            <hr />
+
+            </div>
+
+    </div>
+</div>

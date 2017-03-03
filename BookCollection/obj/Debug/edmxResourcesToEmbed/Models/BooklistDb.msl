@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DefaultConnectionModelStoreContainer" CdmEntityContainer="DefaultConnectionEntities">
+    <EntitySetMapping Name="Booklists">
+      <EntityTypeMapping TypeName="DefaultConnectionModel.Booklists">
+        <MappingFragment StoreEntitySet="Booklists">
+          <ScalarProperty Name="booklistId" ColumnName="booklistId" />
+          <ScalarProperty Name="booklistName" ColumnName="booklistName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="linkAspNetUsersBooklists">
+      <EntityTypeMapping TypeName="DefaultConnectionModel.linkAspNetUsersBooklists">
+        <MappingFragment StoreEntitySet="linkAspNetUsersBooklists">
+          <ScalarProperty Name="booklistId" ColumnName="booklistId" />
+          <ScalarProperty Name="aspNetUserId" ColumnName="aspNetUserId" />
+          <ScalarProperty Name="linkAspNetUsersBooklistsId" ColumnName="linkAspNetUsersBooklistsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="DefaultConnectionModel.Books">
+        <MappingFragment StoreEntitySet="Books">
+          <ScalarProperty Name="bookOwned" ColumnName="bookOwned" />
+          <ScalarProperty Name="bookEANNumber" ColumnName="bookEANNumber" />
+          <ScalarProperty Name="bookPublishYear" ColumnName="bookPublishYear" />
+          <ScalarProperty Name="bookName" ColumnName="bookName" />
+          <ScalarProperty Name="bookId" ColumnName="bookId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="linkBooklistsBooks">
+      <EntityTypeMapping TypeName="DefaultConnectionModel.linkBooklistsBooks">
+        <MappingFragment StoreEntitySet="linkBooklistsBooks">
+          <ScalarProperty Name="bookId" ColumnName="bookId" />
+          <ScalarProperty Name="booklistId" ColumnName="booklistId" />
+          <ScalarProperty Name="linkBooklistsBooksId" ColumnName="linkBooklistsBooksId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BooklistDetailView">
+      <EntityTypeMapping TypeName="DefaultConnectionModel.BooklistDetailView">
+        <MappingFragment StoreEntitySet="BooklistDetailView">
+          <ScalarProperty Name="bookOwned" ColumnName="bookOwned" />
+          <ScalarProperty Name="bookEANNumber" ColumnName="bookEANNumber" />
+          <ScalarProperty Name="bookPublishYear" ColumnName="bookPublishYear" />
+          <ScalarProperty Name="bookName" ColumnName="bookName" />
+          <ScalarProperty Name="bookId" ColumnName="bookId" />
+          <ScalarProperty Name="booklistName" ColumnName="booklistName" />
+          <ScalarProperty Name="booklistId" ColumnName="booklistId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,39 @@
+﻿@model BookCollection.Models.IndexViewModel
+@{
+    ViewBag.Title = "Manage";
+}
+
+<div class="regSite">
+    <div class="jumbotron">
+        <h2>Manage</h2>
+
+        <p class="text-success">@ViewBag.StatusMessage</p>
+        <div>
+            <h4>Change your account settings</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>Password:</dt>
+                <dd>
+                    [
+                    @if (Model.HasPassword)
+            {
+                        @Html.ActionLink("Change your password", "ChangePassword")
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Create", "ChangePassword")
+                    }
+                    ]
+                </dd>
+            </dl>
+            <dl class="dl-horizontal">
+                <dt>Delete User:</dt>
+                <dd>
+                    [
+                    @Html.ActionLink("Delete", "DeleteUser")
+                    ]
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
